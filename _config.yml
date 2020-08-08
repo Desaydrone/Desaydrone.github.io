@@ -20,22 +20,61 @@
 
 title: Pense bête
 email: tarlak.desaydrone@gmail.om
-description: >- Un petit endroit pour me souvenir # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: "Un petit endroit pour me souvenir"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://desaydrone.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  Desaydrone
-locale: "fr-FR"
+github_username:  "Desaydrone"
+
+locale: "fr"
 
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes@4.20.1"
 minimal_mistakes_skin: "dark"
 
+repository: "desaydrone/desaydrone.github.io"
+masthead_title: "Mon pense bête"
+
+permalink: /:title/
+breadcrumbs: true
+
+search: true
+
+author:
+  name     : "Tarlak Desaydrone"
+  avatar   : "/assets/images/bio-photo.png"
+  bio      : ""
+  location : "Somewhere France"
+  links    :
+      - label: "Site"
+        icon: "fas fa-fw fa-link"
+        url: "https://desaydrone.github.io"
+      - label: "GitHub"
+        icon: "fab fa-fw fa-github"
+        url: "https://github.com/desaydrone"
+
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      show_date: true
+      author_profile: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+paginate: 1
+
 plugins:
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-paginate
 
 # Exclude from processing.
 # The following items will not be processed, by default.
