@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-08-27T09:47:35.822Z" agent="5.0 (Windows)" etag="NNdh9Bp9UhJsaXFm-Mx3" version="13.6.5" type="github">
+<mxfile host="app.diagrams.net" modified="2020-08-27T09:48:03.281Z" agent="5.0 (Windows)" etag="wxZBzoFx5edUOHfIMfco" version="13.6.5" type="github">
   <diagram name="Page-1" id="bfe91b75-5d2c-26a0-9c1d-138518896778">
     <mxGraphModel dx="2496" dy="1776" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
@@ -113,7 +113,7 @@
             <mxPoint y="-11.76" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="AFrHU2EzTEkSez1uoTaX-23" value="Lan" style="rounded=1;shadow=0;comic=0;strokeColor=#036897;strokeWidth=2;fillColor=none;fontFamily=Verdana;fontSize=28;fontColor=#6881B3;align=center;arcSize=11;verticalAlign=top;html=1;whiteSpace=wrap;labelBackgroundColor=none;labelBorderColor=none;" vertex="1" parent="1">
+        <mxCell id="AFrHU2EzTEkSez1uoTaX-23" value="Lan : 192.168.5.0/24" style="rounded=1;shadow=0;comic=0;strokeColor=#036897;strokeWidth=2;fillColor=none;fontFamily=Verdana;fontSize=28;fontColor=#6881B3;align=center;arcSize=11;verticalAlign=top;html=1;whiteSpace=wrap;labelBackgroundColor=none;labelBorderColor=none;" vertex="1" parent="1">
           <mxGeometry x="1385" y="290" width="695" height="420" as="geometry" />
         </mxCell>
         <mxCell id="AFrHU2EzTEkSez1uoTaX-24" value="" style="fontColor=#0066CC;verticalAlign=top;verticalLabelPosition=bottom;labelPosition=center;align=center;html=1;outlineConnect=0;fillColor=#CCCCCC;strokeColor=#6881B3;gradientColor=none;gradientDirection=north;strokeWidth=2;shape=mxgraph.networks.pc;" vertex="1" parent="1">
