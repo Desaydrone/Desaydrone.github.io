@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-08-28T06:14:33.213Z" agent="5.0 (Windows)" etag="tTRFldYuGzy9IWKWMeth" version="13.6.5" type="github">
+<mxfile host="app.diagrams.net" modified="2020-08-28T06:20:48.488Z" agent="5.0 (Windows)" etag="EbC7kKPSkzH-fofD4i_U" version="13.6.5" type="github">
   <diagram name="Page-1" id="bfe91b75-5d2c-26a0-9c1d-138518896778">
     <mxGraphModel dx="1877" dy="1177" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
       <root>
@@ -191,7 +191,10 @@
           <mxGeometry x="720" y="762" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="l9BPSRdwZ6z41PGdl8-M-4" value="DNS&lt;br style=&quot;font-size: 14px;&quot;&gt;VPN&lt;br style=&quot;font-size: 14px;&quot;&gt;DHCP&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;div style=&quot;font-size: 14px;&quot;&gt;Firewall&lt;/div&gt;&lt;div style=&quot;font-size: 14px;&quot;&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;/div&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.5;direction=west;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;fontSize=14;fontStyle=1;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="1430" y="979.41" width="170" height="130.59" as="geometry" />
+          <mxGeometry x="1440" y="1060" width="170" height="130.59" as="geometry" />
+        </mxCell>
+        <mxCell id="l9BPSRdwZ6z41PGdl8-M-5" value="&lt;div&gt;&lt;div align=&quot;center&quot;&gt;Notes :&lt;br&gt;&lt;/div&gt;&lt;br&gt;&lt;ol&gt;&lt;li&gt;Acces internet ? : &lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; agrégation de lien pour plus de débit&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; load balancing : répartition de charge&lt;/li&gt;&lt;li&gt;Fireall ? :&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; le doubler afin de faire du fail over&lt;br&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=14;verticalAlign=top;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1850" y="1070" width="420" height="250" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
