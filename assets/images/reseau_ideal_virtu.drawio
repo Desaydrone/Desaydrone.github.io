@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-08-28T06:11:22.310Z" agent="5.0 (Windows)" etag="PfJ2QM_SYDTTfh6eFkXb" version="13.6.5" type="github">
+<mxfile host="app.diagrams.net" modified="2020-08-28T06:12:46.496Z" agent="5.0 (Windows)" etag="16Df2Qoy3MmD8qmaCE_v" version="13.6.5" type="github">
   <diagram name="Page-1" id="bfe91b75-5d2c-26a0-9c1d-138518896778">
     <mxGraphModel dx="1877" dy="1177" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
       <root>
@@ -186,6 +186,9 @@
             <mxPoint x="1800" y="840" as="sourcePoint" />
             <mxPoint x="1900" y="740" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="l9BPSRdwZ6z41PGdl8-M-1" value="&lt;div align=&quot;center&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 14px&quot;&gt;Baie de disques RAID &lt;/font&gt;&lt;/b&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="720" y="762" width="40" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
