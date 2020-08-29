@@ -5,6 +5,7 @@ excerpt: "Dans cet article nous allons voir comment avoir une notification des d
 toc: true
 toc_label: "Sommaire"
 toc_icon: "file-alt"
+toc_sticky: true
 
 gallery:
     - url: /assets/images/discordlink_deamon/00_apercu_notification.png
