@@ -1,11 +1,8 @@
 @charset "utf-8";
 
-.page__content {
-    text-align: justify;
-  }
-  
-  
+$paragraph-indent: true;
+$indent-var: 4;
+
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
-
