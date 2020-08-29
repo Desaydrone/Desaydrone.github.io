@@ -62,6 +62,9 @@ defaults:
       show_date: true
       author_profile: true
       layout: single
+      header:
+        image: /assets/images/header/chris-ried-ieic5Tq8YMk-unsplash.jpg
+        caption: "Photo credit : [**Chris Ried**](https://unsplash.com/photos/ieic5Tq8YMk)"
   # _pages
   - scope:
       path: ""
@@ -70,6 +73,9 @@ defaults:
       layout: single
       classes: wide
       author_profile: true
+      header:
+        image: /assets/images/header/chris-ried-ieic5Tq8YMk-unsplash.jpg
+        caption: "Photo credit : [**Chris Ried**](https://unsplash.com/photos/ieic5Tq8YMk)"
 
 paginate: 10
 
