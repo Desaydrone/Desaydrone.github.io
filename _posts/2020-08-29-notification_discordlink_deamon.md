@@ -22,6 +22,11 @@ gallery2:
       image_path: /assets/images/discordlink_deamon/02_scenario_notification.png
       alt: "Bloc Si alors et action"
 
+gallery3:
+    - url: /assets/images/discordlink_deamon/03_totalite_scenario.png
+      image_path: /assets/images/discordlink_deamon/03_totalite_scenario.png
+      alt: "Bloc Si alors et action"
+
 
 ---
 
@@ -131,7 +136,9 @@ On ajoute un bloc **si alors sinon** et ensuite dans celui-ci un bloc action
 1. On test si la variable koD est différente de 0 et si c'est le cas on envoi notre notification
 2. On utilise l’envoi de message évolué d’une commande du plugin **Discord Link**, dans le titre je récupère mes différents compteurs `$okD` (nombre de daemon fonctionnel) et `$koD` (nombre de deamon non fonctionnel). Dans la description je récupère le contenu de la variable `$listKoD` (nom des daemons en erreur)
 
-Et c’est tout, avec ceci j’ai juste la liste des daemons qui ont un souci, avec quand même cette petite info du nombre de daemon fonctionnel dans le titre de la notification. 
+Et c’est tout, avec ceci j’ai juste la liste des daemons qui ont un souci, avec quand même cette petite info du nombre de daemon fonctionnel dans le titre de la notification.
+
+{% include gallery id="gallery3" caption="Le scénario au complet." %}
 
 Si vous avez été attentif vous allez me dire que je n'ai pas utilisé le contenu de ma variable : `$daemon` et vous avez bien raison. Je pourrais la rajouter, dans le titre de ma notification ou dans le footer, pour le moment le résultat me convient. Je la garde quand même de côté au cas où.
 
