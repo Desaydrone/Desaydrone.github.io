@@ -33,23 +33,18 @@ gallery3:
 ---
 
 Petit article rapide pour mettre en place, une notification pour les daemons jeedom ayant un problème, via le plugin discordlink et obtenir quelque chose comme ça :
-{: .text-justify}
 
 {% include gallery layout="half" caption="Résultat de la notification Discord." %}
 
 Je suis du genre à vouloir savoir ce qui ne fonctionne pas, ce qui est fonctionnel ne m'intéresse pas, car je n'ai pas besoin de le savoir. Ça engendrerait trop de notification. Du coup; la notification de base du plugin ne me convenait pas.
-{: .text-justify}
 
 Donc pour mettre cela en place il va nous falloir le plugin [Discord Link](https://market.jeedom.com/index.php?v=d&p=market_display&id=3938), disponible sur le market de jeedom. Je vous laisse lire la documentation du plugin pour le mettre en place.
-{: .text-justify}
 
 Et en deuxième lieu il nous faudra un scénario permettant de faire ce qu'on veut.
-{: .text-justify}
 
 ## Côté scénario
 
 Première chose à faire, la création d’un scénario, pour ma part il est programmé pour s’exécuter toutes les 6 minutes
-{: .text-justify}
 
 {% include gallery id="gallery1" caption="Programmation du scénario." %}
 
@@ -57,7 +52,6 @@ Première chose à faire, la création d’un scénario, pour ma part il est pro
 
 ### Bloc code
 Ensuite, dans un bloc code je saisis ce qui suit  :
-{: .text-justify}
 
 ```php
 
@@ -87,7 +81,6 @@ $scenario->setData('listKoD',$ListeDaemonKO);
 ```
 
 Non, je ne vous laisse pas dans l’ignorance, voilà une petite explication simple
-{: .text-justify}
 
 ### Partie 1 du bloc code
 
@@ -105,7 +98,6 @@ Phase d'initilisation du bloc code, je définis des variables qui vont récupér
 * $ok : compteur qui me retournera le nombre de daemons qui ne sont pas en erreur
 * $nok : compteur qui me retournera le nombre de daemons en erreur
 * $ListeDeamonKO = variable qui contiendra la liste nominative des déamons en erreur (ex : Bluetooth Advertissement)
-{: .text-justify}
 
 ### Partie 2 du bloc code
 
@@ -125,7 +117,6 @@ foreach (plugin::listPlugin(true) as $plugin) {
 ```
 
 Ce bloc de code va parcourir tous les plugins installés sur mon jeedom et regardé a chaque plugin si un daemon existe, si un daemon existe alors j’augmente mon compteur `$daemon` de 1. Ensuite, je teste l’état du daemon si il est égal à OK alors j’incrémente ma variable `$ok` de 1, dans le cas contraire alors j’incrémente la variable `$nok` de 1 et en plus je concatène à ma variable `$ListeDaemonKO` le nom du daemon (avec devant une emoticon cercle rouge) 
-{: .text-justify}
 
 ### Partie 3 du bloc code
 
@@ -137,28 +128,24 @@ $scenario->setData('listKoD',$ListeDaemonKO);
 ```
 
 Ici, rien de bien compliqué, pour chaque variable de mon bloc code je crée une variable **Jeedom**, elles vont alors me permettre de passer les valeurs au plugin **Discord Link**.
-{: .text-justify}
 
 ## Suite du scénario bloc Si alors...
 
 On ajoute un bloc **si alors sinon** et ensuite dans celui-ci un bloc action
-{: .text-justify}
 
 {% include gallery id="gallery2" caption="Bloc Si alors et action." %}
 
 1. On test si la variable koD est différente de 0 et si c'est le cas on envoi notre notification
 2. On utilise l’envoi de message évolué d’une commande du plugin **Discord Link**, dans le titre je récupère mes différents compteurs `$okD` (nombre de daemon fonctionnel) et `$koD` (nombre de deamon non fonctionnel). Dans la description je récupère le contenu de la variable `$listKoD` (nom des daemons en erreur)
-{: .text-justify}
 
 Et c’est tout, avec ceci j’ai juste la liste des daemons qui ont un souci, avec quand même cette petite info du nombre de daemon fonctionnel dans le titre de la notification.
-{: .text-justify}
 
 {% include gallery id="gallery3" caption="Le scénario au complet." %}
 
 Si vous avez été attentif vous allez me dire que je n'ai pas utilisé le contenu de ma variable : `$daemon` et vous avez bien raison. Je pourrais la rajouter, dans le titre de ma notification ou dans le footer, pour le moment le résultat me convient. Je la garde quand même de côté au cas où.
-{: .text-justify}
+
 
 On pourrait améliorer le scénario également en prévoyant des exceptions aussi pour ne pas tester l'état de certains daemon. Je pense par exemple au Daemon Bluetooth Advertisement qui ne tourne pas forcement sur jeedom mais sur des antennes. Ce serait dommage que toutes les 6 minutes on reçoive une notification d'un daemon que nous avons volontairement arrêté.
-{: .text-justify}
+
 
 
