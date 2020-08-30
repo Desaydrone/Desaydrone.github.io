@@ -149,3 +149,5 @@ On pourrait améliorer le scénario également en prévoyant des exceptions auss
 
 
 
+Je tiens à remercier **Thibaut Black** pour son plugin **Discord Link** qui vraiment me permet de bien mieux gérer mes notifications qu'avec télégram.
+{: .notice--success}
