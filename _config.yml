@@ -29,7 +29,7 @@ locale: "fr"
 
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes@4.20.1"
-minimal_mistakes_skin: "dark"
+minimal_mistakes_skin: "mint"
 
 repository: "desaydrone/desaydrone.github.io"
 masthead_title: "Mon pense bête"
@@ -42,15 +42,18 @@ search: true
 author:
   name     : "Tarlak Desaydrone"
   avatar   : "/assets/images/bio-photo.png"
-  bio      : ""
+  bio      : "Amteur de domotique, je partagerais des petites choses ici et la"
   location : "Somewhere France"
   links    :
       - label: "Site"
         icon: "fas fa-fw fa-link"
         url: "https://desaydrone.github.io"
       - label: "GitHub"
-        icon: "fab fa-fw fa-github"
+        icon: "fab fa-github-square"
         url: "https://github.com/desaydrone"
+      - label: "Widget full Css Jeedom V4"
+        icon: "fab fa-fw fa-dev"
+        url: "https://github.com/Desaydrone/jeedom_v4_widget/wiki"
 
 
 defaults:
