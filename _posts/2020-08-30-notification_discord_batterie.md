@@ -26,6 +26,8 @@ gallery2:
       alt: "Programmation cron tab"  
 ---
 
+**Mise à jour 28 Novembre 2020** : Modification du script pour prendre en compte l'exclusionde certain équipement (exemple les virtuels)
+
 Un nouvel article rapide pour mettre en place une notification, pour les équipements munis de batteries dans jeedom ayant un status **warning** ou **danger**, via le plugin discordlink et obtenir quelque chose comme ça :
 
 {% include gallery layout="half" caption="Résultat de la notification Discord." %}
@@ -56,7 +58,7 @@ Quel va être le principe de ce code, il va parcourir tous les équipements qui 
 
 //Partie 1
 $batterie = "Batterie"; // Nom de la commande à rechercher
-//$excludeEq = array("[Domotique][Aspirateur]"); // Liste des équipements à ignorer (qui contiennent la commande "$batterie"), ceci est un exemple de syntaxe
+//$excludeEq = array("[Domotique][Mo]"=>1,"[Appartement][Batteries]" => 1); // Liste des équipements à ignorer (qui contiennent la commande "$batterie"), ceci est un exemple de syntaxe
 $excludeEq = array();
 $msgA = ""; //Message a envoyer sur l'état des batteries en danger
 $msgW = ""; //Message a envoyer sur l'état des batteries en warning
@@ -72,6 +74,9 @@ $eqLogics = eqLogic::all();
 
 foreach($eqLogics as $eqLogic)
 {
+  if ($excludeEq[$eqLogic->getHumanName()] == 1){
+    continue;
+  }
   try{
     //Partie 2
     if (isset($batterie))
@@ -86,7 +91,7 @@ foreach($eqLogics as $eqLogic)
       //Partie 3
       foreach($allCmds as $cmd)
       {  
-        if (strpos($cmd->getHumanName(),$batterie) !== false)
+        if (strpos($cmd->getHumanName(),'['.$batterie.']') !== false)
         {
           $lenNom = ($lenNom < strlen($eqLogic->getName())) ? strlen($eqLogic->getName())+1 : $lenNom;
         }
@@ -95,7 +100,7 @@ foreach($eqLogics as $eqLogic)
       //Partie 4
       foreach($allCmds as $cmd)
       {  
-        if (strpos($cmd->getHumanName(),$batterie) !== false)
+        if (strpos($cmd->getHumanName(),'['.$batterie.']') !== false)
         {
           $cmd->execCmd();
           
@@ -162,7 +167,7 @@ Dans cette partie je vais définir plusieurs variables qui me serviront soit de 
 A partir de maintenant accrochez-vous on complique les choses. Ici je teste dans mon `if` si la variable `$batterie` contient quelque chose et on essai de voir s'il existe dans l'équipement une commande concernant la batterie. Et j'en profite pour récupérer ensuite toutes les commandes de cet équipement et je teste malgrè tout qu'il y a bien des commandes existants pour cet équipement (on est jamais trop prudent)
 
 #### Explication partie 3
-Dans cette partie on va parcourir tous les équipements ayant une commande batterie, et récupérer le nombre de caractères de ce nom, et a chaque fois le comparer à la longueur du nom de l'équipement précéndent. Pourquoi donc, parce que je suis un peu maniaque et que je veux une belle présentation et en ayant cette longueur de chaîne de caractères dans `$lenNom` je pourrais faire en sorte de bien aligner les valeurs de mes batteries. Mais je vous en reparle plus tard.
+Dans cette partie on va parcourir tous les équipements ayant une commande batterie, et récupérer le nombre de caractères de ce nom, et a chaque fois le comparer à la longueur du nom de l'équipement précédent. Pourquoi donc, parce que je suis un peu maniaque et que je veux une belle présentation et en ayant cette longueur de chaîne de caractères dans `$lenNom` je pourrais faire en sorte de bien aligner les valeurs de mes batteries. Mais je vous en reparle plus tard.
 
 #### Explication partie 4
 Cette partie est la plus importante, elle va permettre de tester si une batterie est _OK_, en _Warning_ ou en _Danger_:
