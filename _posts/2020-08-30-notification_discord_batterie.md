@@ -26,7 +26,7 @@ gallery2:
       alt: "Programmation cron tab"  
 ---
 
-**Mise à jour 28 Novembre 2020** : Modification du script pour prendre en compte l'exclusionde certain équipement (exemple les virtuels)
+**Mise à jour 28 Novembre 2020** : Modification du script pour prendre en compte l'exclusionde certain équipement (exemple les virtuels), merci à Sebfar sur discord de m'avoir fait remarqué cela.
 
 Un nouvel article rapide pour mettre en place une notification, pour les équipements munis de batteries dans jeedom ayant un status **warning** ou **danger**, via le plugin discordlink et obtenir quelque chose comme ça :
 
