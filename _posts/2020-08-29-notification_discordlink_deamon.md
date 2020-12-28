@@ -31,6 +31,7 @@ gallery3:
 
 
 ---
+**Mise à jour 28 Décembre 2020** : Ajout de l'exclusion, afin de permettre de ne pas prendre en compte certain deamon, par exemple dans mon cas j'ai blea d'installé sur jeeom, mais le deamon n'est pas activé. Je n'utilise que des antennes.
 
 Petit article rapide pour mettre en place, une notification pour les daemons jeedom ayant un problème, via le plugin discordlink et obtenir quelque chose comme ça :
 
@@ -60,6 +61,8 @@ $daemon = 0;
 $ok = 0;
 $nok = 0 ;
 $ListeDaemonKO = '';
+//Permet l'exclusion de certain deamon qui ne sont pas a surveiller, ici dans l'exemple Blea qui ne tournerais pas sur jeedom mais sur des antennes
+$excludeEq = array("Bluetooth Advertisement" => 1);
 
 //Partie 2
 foreach (plugin::listPlugin(true) as $plugin) {
@@ -68,8 +71,11 @@ foreach (plugin::listPlugin(true) as $plugin) {
 		if($plugin->deamon_info()['state'] == 'ok') {
 			$ok++;
 		} else {
-			$nok++;
-			$ListeDaemonKO .= ":red_circle: ".$plugin->getName() . "\n"; 			
+			//Test les exclusions
+			if ($excludeEq[$plugin->getName()]!=1){
+				$nok++;
+				$ListeDaemonKO .= ":red_circle: ".$plugin->getName() . "\n";
+			}
 		}
 	}
 }
@@ -90,6 +96,8 @@ $daemon = 0;
 $ok = 0;
 $nok = 0 ;
 $ListeDaemonKO = '';
+//Permet l'exclusion de certain deamon qui ne sont pas a surveiller, ici dans l'exemple Blea qui ne tournerais pas sur jeedom mais sur des antennes
+$excludeEq = array("Bluetooth Advertisement" => 1);
 ```
 
 Phase d'initilisation du bloc code, je définis des variables qui vont récupérer certaines infos :
@@ -109,8 +117,11 @@ foreach (plugin::listPlugin(true) as $plugin) {
 		if($plugin->deamon_info()['state'] == 'ok') {
 			$ok++;
 		} else {
-			$nok++;
-			$ListeDaemonKO .= ":red_circle: ".$plugin->getName() . "\n"; 			
+			//Test les exclusions
+			if ($excludeEq[$plugin->getName()]!=1){
+				$nok++;
+				$ListeDaemonKO .= ":red_circle: ".$plugin->getName() . "\n";
+			}
 		}
 	}
 }
