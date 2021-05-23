@@ -118,13 +118,13 @@ foreach($eqLogics as $eqLogic)
 
           if($etatBatterie['batterydanger']==1)
           {
-            $msgA .= ":red_circle: `".$eqLogic->getName() . $nbspace ." ` - `". $etatBatterie['battery']." %`\n";
+            $msgA .= ":red_circle: `".$eqLogic->getName() . $nbspace ." ` - `".$espace.$etatBatterie['battery']." %`\n";
             $cpt_a+=1;
           }
           else if($etatBatterie['batterywarning']==1)
           {
 
-            $msgW .= ":orange_circle: `".$eqLogic->getName(). $nbspace ." ` - `".$etatBatterie['battery']." %`\n";
+            $msgW .= ":orange_circle: `".$eqLogic->getName(). $nbspace ." ` - `"$espace..$etatBatterie['battery']." %`\n";
             $cpt_w+=1;
           }else
           {
