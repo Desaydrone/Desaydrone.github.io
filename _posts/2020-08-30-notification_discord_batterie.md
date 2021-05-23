@@ -1,6 +1,7 @@
 ---
 title: "Améliorer les notifications Discordlink pour les batteries"
 date: 2020-08-29 17:30
+last_modified_at: 2020-11-28 12:30
 excerpt: "Dans cet article nous allons voir comment avoir une notification des batteries en warning ou en état critique de jeedom sur discord"
 read_time: true
 toc: true
@@ -26,7 +27,7 @@ gallery2:
       alt: "Programmation cron tab"  
 ---
 
-**Mise à jour 28 Novembre 2020** : Modification du script pour prendre en compte l'exclusionde certain équipement (exemple les virtuels), merci à Sebfar sur discord de m'avoir fait remarqué cela.
+**Mise à jour 28 Novembre 2020** : Modification du script pour prendre en compte l'exclusion de certain équipements (exemple les virtuels), merci à Sebfar sur discord de m'avoir fait remarqué cela.
 
 Un nouvel article rapide pour mettre en place une notification, pour les équipements munis de batteries dans jeedom ayant un status **warning** ou **danger**, via le plugin discordlink et obtenir quelque chose comme ça :
 

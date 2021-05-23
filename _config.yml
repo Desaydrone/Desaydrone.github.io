@@ -42,7 +42,7 @@ search: true
 author:
   name     : "Tarlak Desaydrone"
   avatar   : "/assets/images/bio-photo.png"
-  bio      : "Amteur de domotique, je partagerais des petites choses ici et la"
+  bio      : "Amateur de domotique, je partagerais des petites choses ici et la"
   location : "Somewhere France"
   links    :
       - label: "Site"

@@ -1,8 +1,30 @@
 ---
-title: 
-date: 
+title: "Title"
+date: %YYYY%-%MM%-%dd% %hh%:%mm%
+last_modified_at: 
 excerpt: ""
+read_time: true
 toc: true
 toc_label: "Sommaire"
 toc_icon: "file-alt"
+toc_sticky: true
+
+published: true
+
+gallery:
+    - url: /assets/images/discordlink_battery_state/00_visuel_discord.png
+      image_path: /assets/images/discordlink_battery_state/00_visuel_discord.png
+      alt: "Resultat notification"
+
+gallery1:
+    - url: /assets/images/discordlink_battery_state/01_programmation_scenario.png
+      image_path: /assets/images/discordlink_battery_state/01_programmation_scenario.png
+      alt: "Programmation cron tab"
+
+gallery2:
+    - url: /assets/images/discordlink_battery_state/02_bloc_sialorsaction.png
+      image_path: /assets/images/discordlink_battery_state/02_bloc_sialorsaction.png
+      alt: "Programmation cron tab"  
 ---
+
+Le blabla
