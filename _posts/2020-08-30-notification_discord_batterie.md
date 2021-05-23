@@ -63,6 +63,7 @@ $batterie = "Batterie"; // Nom de la commande à rechercher
 $excludeEq = array();
 $msgA = ""; //Message a envoyer sur l'état des batteries en danger
 $msgW = ""; //Message a envoyer sur l'état des batteries en warning
+$esapce=""; //Permet de gérer un espace supplémentaire pour l'alignement des pourcentage de batterie restante 
 
 $errEqLogics = array();
 $etatBatterie = array(); //Tableau d'information sur la batterie consultée
@@ -108,6 +109,13 @@ foreach($eqLogics as $eqLogic)
           $nbspace=str_repeat(' ',($lenNom - strlen($eqLogic->getName())));
           $etatBatterie=$eqLogic->getStatus();
           $nom=$eqLogic->getName();
+
+          //Gestion de l'espace supplémentaire pour alligner les pourcentage à droite
+          if($etatBatterie['battery']<10)
+            $espace=" ";
+          else
+            $esapce="";
+
           if($etatBatterie['batterydanger']==1)
           {
             $msgA .= ":red_circle: `".$eqLogic->getName() . $nbspace ." ` - `". $etatBatterie['battery']." %`\n";
