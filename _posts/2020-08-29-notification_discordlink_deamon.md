@@ -32,7 +32,7 @@ gallery3:
 
 
 ---
-**Mise à jour 28 Décembre 2020** : Ajout de l'exclusion, afin de permettre de ne pas prendre en compte certain deamon, par exemple dans mon cas j'ai blea d'installé sur jeeom, mais le deamon n'est pas activé. Je n'utilise que des antennes.
+**Mise à jour 28 Décembre 2020** : Ajout de l'exclusion, afin de permettre de ne pas prendre en compte certain deamon, par exemple dans mon cas j'ai blea d'installé sur jeedom, mais le deamon n'est pas activé. Je n'utilise que des antennes.
 
 Petit article rapide pour mettre en place, une notification pour les daemons jeedom ayant un problème, via le plugin discordlink et obtenir quelque chose comme ça :
 
